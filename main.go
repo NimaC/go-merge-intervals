@@ -11,6 +11,7 @@ import (
 	"github.com/NimaC/go-merge-intervals/interval"
 )
 
+// Parse Command Line String Input to List of Intervals
 func parseInput(inputInterval string) []interval.Interval {
 	r := regexp.MustCompile(`\[(?P<Start>[\d]+)\s*,\s*(?P<End>[\d]+)\]+`)
 	matches := r.FindAllStringSubmatch(inputInterval, -1)

@@ -4,7 +4,7 @@ import (
 	"github.com/NimaC/go-merge-intervals/interval"
 )
 
-// Simple Stack Implementation for Interval Type
+// Minimal Stack Implementation for Interval Type with Push and Pop functionality
 type Stack []interval.Interval
 
 func (s Stack) Push(v interval.Interval) Stack {

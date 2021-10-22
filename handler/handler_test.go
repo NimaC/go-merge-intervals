@@ -14,13 +14,11 @@ func generalTest(t *testing.T, input []interval.Interval, expectedOutput []inter
 	}
 }
 
-// Input: []  Output: []
 func TestEmpty(t *testing.T) {
 	var input []interval.Interval
 	generalTest(t, input, input)
 }
 
-// Input: [0, 1]  Output: [0, 1]
 func TestSizeOne(t *testing.T) {
 	input := []interval.Interval{
 		{0, 1},
@@ -28,7 +26,6 @@ func TestSizeOne(t *testing.T) {
 	generalTest(t, input, input)
 }
 
-// Input: [25,30] [2,19] [14, 23] [4,8]  Output: [2,23] [25,30]
 func TestBriefingExample(t *testing.T) {
 	intervals := []interval.Interval{
 		{25, 30},
@@ -53,7 +50,6 @@ func TestNoOverlaps(t *testing.T) {
 	expectedOutput := intervals
 	generalTest(t, intervals, expectedOutput)
 }
-
 func TestBiggerExample(t *testing.T) {
 	intervals := []interval.Interval{
 		{2, 2},
