@@ -1,16 +1,17 @@
 package stack
 
 import (
-	"../interval"
+	"github.com/NimaC/go-merge-intervals/interval"
 )
 
-type stack []interval.Interval
+// Simple Stack Implementation for Interval Type
+type Stack []interval.Interval
 
-func (s stack) Push(v interval.Interval) stack {
+func (s Stack) Push(v interval.Interval) Stack {
 	return append(s, v)
 }
 
-func (s stack) Pop() (stack, interval.Interval, bool) {
+func (s Stack) Pop() (Stack, interval.Interval, bool) {
 	l := len(s)
 	if l == 0 {
 		return s, interval.Interval{0, 0}, false
